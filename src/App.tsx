@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import Stage from './pages/Stage';
 import Chapter from './pages/Chapter';
 import Test from './pages/Test';
+import Tuner from './pages/Tuner';
+import Fretboard from './pages/Fretboard';
+import NotFound from './pages/NotFound';
 import Header from './components/layout/Header';
 import GuideOrb from './components/guide/GuideOrb';
 import SettingsDrawer from './components/layout/SettingsDrawer';
@@ -20,9 +23,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/fretboard" element={<Fretboard />} />
+            <Route path="/tools" element={<Tuner />} />
             <Route path="/stage/:stageId" element={<Stage />} />
             <Route path="/stage/:stageId/test" element={<Test />} />
             <Route path="/stage/:stageId/:chapterId" element={<Chapter />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         

@@ -4,16 +4,36 @@ import { useProgressStore } from '../lib/progress';
 import { ArrowLeft, Lightbulb, AlertTriangle, ListChecks } from 'lucide-react';
 import Quiz from '../components/Quiz';
 
+import { Settings2, AlignLeft, HelpCircle } from 'lucide-react';
+
 function TunerPlaceholder() {
-  return <div className="bg-stone-900 border border-stone-700 p-8 text-center text-stone-500 rounded my-4">Interactive Tuner Component</div>;
+  return (
+    <div className="bg-stone-900 border border-stone-800 p-8 flex flex-col items-center justify-center text-stone-500 rounded-lg my-4 shadow-inner">
+      <Settings2 className="w-8 h-8 mb-3 text-stone-600" />
+      <span className="font-bold text-stone-400">Interactive Tuner</span>
+      <span className="text-sm mt-1">Scheduled for Phase 3</span>
+    </div>
+  );
 }
 
 function FretboardPlaceholder() {
-  return <div className="bg-stone-900 border border-stone-700 p-8 text-center text-stone-500 rounded my-4">Interactive Fretboard Component</div>;
+  return (
+    <div className="bg-stone-900 border border-stone-800 p-8 flex flex-col items-center justify-center text-stone-500 rounded-lg my-4 shadow-inner">
+      <AlignLeft className="w-8 h-8 mb-3 text-stone-600 transform rotate-90" />
+      <span className="font-bold text-stone-400">Interactive Fretboard</span>
+      <span className="text-sm mt-1">Scheduled for Phase 3</span>
+    </div>
+  );
 }
 
 function StringQuizPlaceholder() {
-  return <div className="bg-stone-900 border border-stone-700 p-8 text-center text-stone-500 rounded my-4">String Name Quiz Component</div>;
+  return (
+    <div className="bg-stone-900 border border-stone-800 p-8 flex flex-col items-center justify-center text-stone-500 rounded-lg my-4 shadow-inner">
+      <HelpCircle className="w-8 h-8 mb-3 text-stone-600" />
+      <span className="font-bold text-stone-400">String Name Quiz</span>
+      <span className="text-sm mt-1">Scheduled for Phase 3</span>
+    </div>
+  );
 }
 
 export default function ChapterPage() {
